@@ -1,6 +1,6 @@
 export default function (state=null, action){
   switch (action.type) {
-    case "USER_SELECTED":
+    case "MUSIC_SELECTED":
       return action.payload;
       break;
   }

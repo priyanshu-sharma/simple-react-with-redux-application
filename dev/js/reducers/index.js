@@ -1,15 +1,15 @@
 import {combineReducers} from 'redux';
-import UserReducer from './reducer-users';
+import UserReducer from './reducers-user';
+import MusicReducer from './reducers-music';
 import ActiveUserReducer from './reducer-active-user';
+import ActiveMusicReducer from './reducer-active-music';
 
-/*
- * We combine all reducers into a single object before updated data is dispatched (sent) to store
- * Your entire applications state (store) is just whatever gets returned from all your reducers
- * */
-
+//One Big JavaScript object
 const allReducers = combineReducers({
-    users: UserReducer,
-    activeUser: ActiveUserReducer
+  user: UserReducer,
+  activeUser: ActiveUserReducer,
+  music: MusicReducer,
+  activeMusic: ActiveMusicReducer
 });
 
-export default allReducers
+export default allReducers;
